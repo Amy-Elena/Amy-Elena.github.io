@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="A practice case study comparing marketing campaign performance across channels, cities, devices, ads, and time." />
+		<meta property="og:title" content="Marketing Data Analysis | Amara Igboanugo" />
+		<meta property="og:description" content="A practice case study comparing marketing campaign performance across channels, cities, devices, ads, and time." />
+		<meta name="theme-color" content="#f7f9fa" />
+		<title>Marketing Data Analysis | Amara Igboanugo</title>
+		<link rel="icon" type="image/png" href="../images/profile%20pic.png" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+	</head>
+	<body>
+		<a class="skip-link" href="#main">Skip to content</a>
+		<header class="site-header">
+			<div class="container header-inner">
+				<a class="wordmark" href="../index.html#top" aria-label="Amara Igboanugo, home">Amara Igboanugo<span>.</span></a>
+				<nav aria-label="Main navigation">
+					<ul class="nav-list">
+						<li><a href="../index.html#work">Work</a></li>
+						<li><a href="../index.html#dashboards">Dashboards</a></li>
+						<li><a href="../index.html#capabilities">Capabilities</a></li>
+						<li><a href="../index.html#about">About</a></li>
+						<li><a href="../index.html#contact">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<main id="main">
+			<section class="case-hero" id="top" aria-labelledby="case-title">
+				<div class="container">
+					<a class="back-link" href="../index.html#work">← Back to projects</a>
+					<div class="case-classification"><span class="tag tag-practice">Practice case study</span><span>Dataset provided to students</span></div>
+					<h1 id="case-title">Marketing Data Analysis</h1>
+					<p class="case-lede">A comparison of campaign, channel, city, device, and ad performance to identify useful patterns for future marketing decisions.</p>
+				</div>
+			</section>
+
+			<div class="container case-layout">
+				<nav class="case-section-nav" aria-label="Case study sections">
+					<a href="#overview">Overview</a>
+					<a href="#problem">Business problem</a>
+					<a href="#objective">Objective</a>
+					<a href="#approach">Approach</a>
+					<a href="#tools">Tools</a>
+					<a href="#findings">Findings</a>
+					<a href="#recommendations">Recommendations</a>
+					<a href="#evidence">Evidence</a>
+				</nav>
+
+				<article class="case-content">
+					<section class="case-section" id="overview" aria-labelledby="overview-title">
+						<h2 id="overview-title">Overview</h2>
+						<p>This practice case study uses a dataset provided to students. It contains 9,900 rows and 18 columns covering March to November 2023, with campaign, city, device, channel, and ad information. Currency values are in GBP. The data checks found no nulls and no duplicate rows.</p>
+						<dl class="case-facts">
+							<div><dt>Period</dt><dd>March–November 2023</dd></div>
+							<div><dt>Dataset</dt><dd>9,900 rows · 18 columns</dd></div>
+							<div><dt>Currency</dt><dd>GBP (£)</dd></div>
+						</dl>
+					</section>
+
+					<section class="case-section" id="problem" aria-labelledby="problem-title">
+						<h2 id="problem-title">Business problem</h2>
+						<p>Marketing performance varies across channels, campaigns, cities, devices, ads, and time. The analysis looks at where spend returned value, where conversions were more common, and which ads or periods attracted activity, so future decisions can be based on observed results.</p>
+					</section>
+
+					<section class="case-section" id="objective" aria-labelledby="objective-title">
+						<h2 id="objective-title">Objective</h2>
+						<p>Compare the available marketing measures across the dataset’s main groupings and summarize findings that can inform cautious tests of channel, city, and creative strategy.</p>
+					</section>
+
+					<section class="case-section" id="approach" aria-labelledby="approach-title">
+						<h2 id="approach-title">Approach</h2>
+						<ol>
+							<li>Imported the dataset into MySQL, renamed columns for consistency, and corrected data types.</li>
+							<li>Used SQL for exploratory analysis across campaign, channel, city, device, ad, and time groupings.</li>
+							<li>Built Power BI visuals to compare conversion rate by city, spend against conversion value, and trends over time.</li>
+						</ol>
+					</section>
+
+					<section class="case-section" id="tools" aria-labelledby="tools-title">
+						<h2 id="tools-title">Tools</h2>
+						<ul class="tool-tags" aria-label="Tools used"><li>MySQL</li><li>SQL</li><li>Power BI</li></ul>
+					</section>
+
+					<section class="case-section" id="findings" aria-labelledby="findings-title">
+						<h2 id="findings-title">Findings</h2>
+						<aside class="metric-note" aria-labelledby="metric-note-title">
+							<h3 id="metric-note-title">How metrics are defined</h3>
+							<p>ROI = (conversion value − spend) ÷ spend, shown as a percentage. Conversion rate = conversions ÷ impressions.</p>
+						</aside>
+
+						<h3>Channel return and value</h3>
+						<p>Pinterest had the best return, while Instagram generated the highest total conversion value.</p>
+						<div class="table-scroll" role="region" aria-label="Channel spend, conversion value and ROI" tabindex="0">
+							<table class="case-table">
+								<caption>Spend, total conversion value, and ROI by channel</caption>
+								<thead><tr><th scope="col">Channel</th><th scope="col">Spend</th><th scope="col">Conversion value</th><th scope="col">ROI</th></tr></thead>
+								<tbody>
+									<tr><th scope="row">Pinterest</th><td>£28,201</td><td>£634,713.80</td><td>2,150.7%</td></tr>
+									<tr><th scope="row">Instagram</th><td>£63,395</td><td>£684,760.68</td><td>980.1%</td></tr>
+									<tr><th scope="row">Facebook</th><td>£71,585</td><td>£412,225.78</td><td>475.9%</td></tr>
+								</tbody>
+							</table>
+						</div>
+
+						<h3>City and device conversion rates</h3>
+						<ul>
+							<li>Birmingham had the highest city conversion rate (0.32%), followed by Manchester (0.29%) and London (0.23%).</li>
+							<li>Desktop conversion rate was 0.37%, compared with 0.21% for mobile.</li>
+						</ul>
+
+						<h3>Ad and monthly patterns</h3>
+						<ul>
+							<li>Collection Ad had more impressions (7.93M) and clicks (105,960) than Discount Ad (6.72M impressions and 75,638 clicks). Discount Ad had more conversions (21,183 versus 19,069).</li>
+							<li>November had the most conversions (5,331). October had higher impressions and clicks.</li>
+						</ul>
+						<p class="case-note">The campaign, device, and ad groupings each total 40,252 conversions.</p>
+					</section>
+
+					<section class="case-section" id="recommendations" aria-labelledby="recommendations-title">
+						<h2 id="recommendations-title">Recommendations</h2>
+						<ul>
+							<li>Test shifting a portion of budget toward higher-ROI channels such as Pinterest, while tracking both return and total conversion value.</li>
+							<li>Review Collection Ad creative or messaging: it drew more impressions and clicks, while Discount Ad recorded more conversions. Compare any revised creative before making a larger change.</li>
+							<li>Use the city and monthly patterns to guide further campaign tests, then continue monitoring results over time.</li>
+						</ul>
+						<p class="case-note">These are test ideas based on the observed data, not forecasts of future gains.</p>
+					</section>
+
+					<section class="case-section" id="evidence" aria-labelledby="evidence-title">
+						<h2 id="evidence-title">Evidence</h2>
+						<ul class="evidence-list">
+							<li><a href="https://github.com/Amy-Elena/Marketing-Data-Analysis">Marketing Data Analysis project repository <span aria-hidden="true">↗</span></a><span>Project files and background</span></li>
+							<li><a href="https://github.com/Amy-Elena/Marketing-Data-Analysis/blob/main/Marketing_data.sql">Marketing_data.sql <span aria-hidden="true">↗</span></a><span>SQL queries</span></li>
+							<li><a href="https://github.com/Amy-Elena/Marketing-Data-Analysis/blob/main/Marketing%20Data.pdf">Marketing Data.pdf <span aria-hidden="true">↗</span></a><span>PDF report</span></li>
+							<li><a href="https://github.com/Amy-Elena/Marketing-Data-Analysis/blob/main/Marketing%20Data.pbix">Marketing Data.pbix <span aria-hidden="true">↗</span></a><span>Power BI file</span></li>
+						</ul>
+						<div class="screenshot-placeholder">
+							<p><strong>Dashboard screenshot</strong></p>
+							<img class="marketing-dashboard-image" src="../images/marketing-dashboard.png" alt="Power BI dashboard from the marketing analysis, showing conversions by city, spend versus conversion value, and trends over time." loading="lazy" />
+						</div>
+					</section>
+				</article>
+			</div>
+		</main>
+
+		<footer class="site-footer">
+			<div class="container footer-inner">
+				<p>© <span>Amara Igboanugo</span></p>
+				<a href="mailto:amaraigboanugo14@gmail.com">Email Amara</a>
+			</div>
+		</footer>
+	</body>
+</html>

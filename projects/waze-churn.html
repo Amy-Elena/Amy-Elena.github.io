@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="A practice case study exploring Waze app churn patterns and model recall." />
+		<meta property="og:title" content="Waze Churn Prediction | Amara Igboanugo" />
+		<meta property="og:description" content="A practice case study exploring Waze app churn patterns and model recall." />
+		<meta name="theme-color" content="#f7f9fa" />
+		<title>Waze Churn Prediction | Amara Igboanugo</title>
+		<link rel="icon" type="image/png" href="../images/profile%20pic.png" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+	</head>
+	<body>
+		<a class="skip-link" href="#main">Skip to content</a>
+		<header class="site-header">
+			<div class="container header-inner">
+				<a class="wordmark" href="../index.html#top" aria-label="Amara Igboanugo, home">Amara Igboanugo<span>.</span></a>
+				<nav aria-label="Main navigation"><ul class="nav-list"><li><a href="../index.html#work">Work</a></li><li><a href="../index.html#dashboards">Dashboards</a></li><li><a href="../index.html#capabilities">Capabilities</a></li><li><a href="../index.html#about">About</a></li><li><a href="../index.html#contact">Contact</a></li></ul></nav>
+			</div>
+		</header>
+
+		<main id="main">
+			<section class="case-hero" id="top" aria-labelledby="case-title">
+				<div class="container">
+					<a class="back-link" href="../index.html#work">← Back to projects</a>
+					<div class="case-classification"><span class="tag tag-practice">Practice case study</span><span>Fictional teaching dataset</span></div>
+					<h1 id="case-title">Waze Churn Prediction</h1>
+					<p class="case-lede">An analysis of app-use patterns and model recall to explore how churn risk might be identified for a second iteration.</p>
+				</div>
+			</section>
+
+			<div class="container case-layout">
+				<nav class="case-section-nav" aria-label="Case study sections"><a href="#overview">Overview</a><a href="#problem">Business problem</a><a href="#objective">Objective</a><a href="#approach">Approach</a><a href="#tools">Tools</a><a href="#findings">Findings</a><a href="#recommendations">Recommendations</a><a href="#evidence">Evidence</a></nav>
+				<article class="case-content">
+					<section class="case-section" id="overview" aria-labelledby="overview-title">
+						<h2 id="overview-title">Overview</h2>
+						<p>This practice project uses a fictional teaching dataset created for learning. It applies the PACE framework to examine user churn and model performance.</p>
+					</section>
+					<section class="case-section" id="problem" aria-labelledby="problem-title">
+						<h2 id="problem-title">Business problem</h2>
+						<p>The project explored whether patterns in app use could help identify users at risk of stopping their use of Waze, and what further data or analysis might be needed.</p>
+					</section>
+					<section class="case-section" id="objective" aria-labelledby="objective-title">
+						<h2 id="objective-title">Objective</h2>
+						<p>Examine churn behavior, test candidate classification models, and assess whether their ability to identify churned users is sufficient to guide another analysis iteration.</p>
+					</section>
+					<section class="case-section" id="approach" aria-labelledby="approach-title">
+						<h2 id="approach-title">Approach</h2>
+						<ol>
+							<li>Used exploratory analysis and hypothesis testing to examine app-use patterns and compare iPhone and Android users.</li>
+							<li>Fit logistic regression, Random Forest, and XGBoost models within the PACE framework.</li>
+							<li>Compared recall and reviewed the role of engineered features in the model results.</li>
+						</ol>
+					</section>
+					<section class="case-section" id="tools" aria-labelledby="tools-title">
+						<h2 id="tools-title">Tools</h2>
+						<ul class="tool-tags" aria-label="Tools and methods used"><li>Python</li><li>Hypothesis testing</li><li>Logistic regression</li><li>Random Forest</li><li>XGBoost</li><li>PACE framework</li></ul>
+					</section>
+					<section class="case-section" id="findings" aria-labelledby="findings-title">
+						<h2 id="findings-title">Findings</h2>
+						<ul>
+							<li>18% of users in the dataset churned.</li>
+							<li>Churned users drove much farther per driving day but used the app on fewer days.</li>
+							<li>The difference in drives between iPhone and Android users was not statistically significant.</li>
+							<li>Logistic regression recall was 9%; XGBoost recall was 17%. Engineered features were important to the model results.</li>
+						</ul>
+					</section>
+					<section class="case-section" id="recommendations" aria-labelledby="recommendations-title">
+						<h2 id="recommendations-title">Recommendations</h2>
+						<p>Run a second iteration with more data and better features. The current recall results indicate that the models may miss many users who churn; additional work is needed before relying on predictions for decisions.</p>
+					</section>
+					<section class="case-section" id="evidence" aria-labelledby="evidence-title">
+						<h2 id="evidence-title">Evidence</h2>
+						<ul class="evidence-list"><li><a href="https://github.com/Amy-Elena/Waze-Churn-Project" target="_blank" rel="noopener noreferrer">Waze Churn Project repository <span aria-hidden="true">↗</span></a><span>Project files and supporting analysis</span></li></ul>
+					</section>
+				</article>
+			</div>
+		</main>
+
+		<footer class="site-footer"><div class="container footer-inner"><p>© <span>Amara Igboanugo</span></p><a href="mailto:amaraigboanugo14@gmail.com">Email Amara</a></div></footer>
+	</body>
+</html>
