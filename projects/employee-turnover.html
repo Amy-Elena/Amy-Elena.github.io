@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="A practice case study exploring employee turnover patterns and model limits in a fictional company." />
+		<meta property="og:title" content="Employee Turnover Prediction | Amara Igboanugo" />
+		<meta property="og:description" content="A practice case study exploring employee turnover patterns and model limits in a fictional company." />
+		<meta name="theme-color" content="#f7f9fa" />
+		<title>Employee Turnover Prediction | Amara Igboanugo</title>
+		<link rel="icon" type="image/png" href="../images/profile%20pic.png" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+	</head>
+	<body>
+		<a class="skip-link" href="#main">Skip to content</a>
+		<header class="site-header">
+			<div class="container header-inner">
+				<a class="wordmark" href="../index.html#top" aria-label="Amara Igboanugo, home">Amara Igboanugo<span>.</span></a>
+				<nav aria-label="Main navigation">
+					<ul class="nav-list">
+						<li><a href="../index.html#work">Work</a></li>
+						<li><a href="../index.html#dashboards">Dashboards</a></li>
+						<li><a href="../index.html#capabilities">Capabilities</a></li>
+						<li><a href="../index.html#about">About</a></li>
+						<li><a href="../index.html#contact">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<main id="main">
+			<section class="case-hero" id="top" aria-labelledby="case-title">
+				<div class="container">
+					<a class="back-link" href="../index.html#work">← Back to projects</a>
+					<div class="case-classification"><span class="tag tag-practice">Practice case study</span><span>Public Kaggle HR dataset used in the Google certificate · fictional Salifort Motors</span></div>
+					<h1 id="case-title">Employee Turnover Prediction</h1>
+					<p class="case-lede">An analysis of employee turnover patterns and a test of whether HR data could help guide retention conversations at fictional Salifort Motors.</p>
+				</div>
+			</section>
+
+			<div class="container case-layout">
+				<nav class="case-section-nav" aria-label="Case study sections">
+					<a href="#overview">Overview</a><a href="#problem">Business problem</a><a href="#objective">Objective</a><a href="#approach">Approach</a><a href="#tools">Tools</a><a href="#findings">Findings</a><a href="#recommendations">Recommendations</a><a href="#evidence">Evidence</a>
+				</nav>
+
+				<article class="case-content">
+					<section class="case-section" id="overview" aria-labelledby="overview-title">
+						<h2 id="overview-title">Overview</h2>
+						<p>This practice project uses a public Kaggle HR dataset as part of the Google certificate. Salifort Motors is fictional. The dataset had 14,999 rows; 3,008 duplicates (20%) were removed, leaving 11,991 employees. 16.6% had left.</p>
+						<dl class="case-facts">
+							<div><dt>Rows before cleaning</dt><dd>14,999</dd></div>
+							<div><dt>Duplicates removed</dt><dd>3,008 (20%)</dd></div>
+							<div><dt>Employees who left</dt><dd>16.6%</dd></div>
+						</dl>
+					</section>
+
+					<section class="case-section" id="problem" aria-labelledby="problem-title">
+						<h2 id="problem-title">Business problem</h2>
+						<p>Leadership at fictional Salifort Motors wanted to understand employee turnover and whether available HR data could help identify patterns linked with leaving. The analysis considered workload, satisfaction, tenure, promotion, evaluation, and department.</p>
+					</section>
+
+					<section class="case-section" id="objective" aria-labelledby="objective-title">
+						<h2 id="objective-title">Objective</h2>
+						<p>Explore patterns associated with attrition, compare a logistic regression baseline with a tree-based model, and identify practical questions for retention policies while treating predictions cautiously.</p>
+					</section>
+
+					<section class="case-section" id="approach" aria-labelledby="approach-title">
+						<h2 id="approach-title">Approach</h2>
+						<ol>
+							<li>Removed duplicate records and explored how turnover related to workload, satisfaction, tenure, promotion, evaluation, and department.</li>
+							<li>Fit a logistic regression model as a baseline.</li>
+							<li>For the random forest, removed satisfaction level as a likely leakage feature and engineered an “overworked” flag for employees working more than 175 hours per month.</li>
+							<li>Compared model performance on the test data and reviewed the most important features.</li>
+						</ol>
+					</section>
+
+					<section class="case-section" id="tools" aria-labelledby="tools-title">
+						<h2 id="tools-title">Tools</h2>
+						<ul class="tool-tags" aria-label="Tools and methods used"><li>Python</li><li>Logistic regression</li><li>Random forest</li><li>Feature engineering</li></ul>
+					</section>
+
+					<section class="case-section" id="findings" aria-labelledby="findings-title">
+						<h2 id="findings-title">Findings</h2>
+						<ul>
+							<li>All 145 employees with seven projects left.</li>
+							<li>Leavers fell into two workload groups: employees who were underworked relative to peers and employees who were heavily overworked.</li>
+							<li>Employees around the four-year mark showed notably low satisfaction. The longest-tenured employees did not leave, and promotion in the last five years was associated with staying.</li>
+							<li>Department made little difference to the turnover patterns.</li>
+							<li>The most important random forest features were last evaluation, number of projects, tenure, and the overworked flag.</li>
+						</ul>
+						<h3>Model results</h3>
+						<p>Logistic regression identified 26% of leavers (recall 0.26; precision 0.44). The random forest, after the feature changes described above, scored as follows on the test data:</p>
+						<div class="table-scroll" role="region" aria-label="Random forest test metrics" tabindex="0">
+							<table class="case-table">
+								<caption>Random forest test-set metrics</caption>
+								<thead><tr><th scope="col">Precision</th><th scope="col">Recall</th><th scope="col">F1</th><th scope="col">Accuracy</th><th scope="col">AUC</th></tr></thead>
+								<tbody><tr><td>0.870</td><td>0.904</td><td>0.887</td><td>0.962</td><td>0.938</td></tr></tbody>
+							</table>
+						</div>
+						<p class="case-note">High scores are common on this dataset. Model predictions should support HR conversations, not individual employment decisions.</p>
+					</section>
+
+					<section class="case-section" id="recommendations" aria-labelledby="recommendations-title">
+						<h2 id="recommendations-title">Recommendations</h2>
+						<ul>
+							<li>Review project assignments and consider a cap on the number of projects per employee.</li>
+							<li>Investigate dissatisfaction around the four-year mark and consider whether promotion paths are clear.</li>
+							<li>Clarify overtime expectations and pay policy.</li>
+							<li>Avoid tying evaluation to long hours.</li>
+						</ul>
+						<p class="case-note">These are review topics suggested by the observed patterns, not claims of guaranteed effects.</p>
+					</section>
+
+					<section class="case-section" id="evidence" aria-labelledby="evidence-title">
+						<h2 id="evidence-title">Evidence</h2>
+						<ul class="evidence-list">
+							<li><a href="https://github.com/Amy-Elena/Employee-Turnover-Prediction" target="_blank" rel="noopener noreferrer">Employee Turnover Prediction repository <span aria-hidden="true">↗</span></a><span>Project files and supporting analysis</span></li>
+						</ul>
+					</section>
+				</article>
+			</div>
+		</main>
+
+		<footer class="site-footer"><div class="container footer-inner"><p>© <span>Amara Igboanugo</span></p><a href="mailto:amaraigboanugo14@gmail.com">Email Amara</a></div></footer>
+	</body>
+</html>
